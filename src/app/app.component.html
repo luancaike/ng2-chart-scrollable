@@ -1,0 +1,36 @@
+<div style="display: flex;justify-content: space-around;">
+  <div
+    class="chart-container"
+    style="height: 600px; width: 700px"
+  >
+    <chart-scrollable [step]="20" [axis]="'y'">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="'horizontalBar'"
+      >
+      </canvas>
+    </chart-scrollable>
+  </div>
+  <div
+    class="chart-container"
+    style="height: 600px; width: 600px;"
+  >
+    <chart-scrollable [step]="6" [axis]="'x'">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="'bar'"
+      >
+      </canvas>
+    </chart-scrollable>
+  </div>
+</div>

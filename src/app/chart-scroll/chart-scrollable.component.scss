@@ -1,0 +1,66 @@
+:host,
+.chart-scroll-wrapper,
+.chart-scroll-wrapper .content {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-wrapper-vertical {
+  position: relative;
+  left: calc(100%);
+  top: -100%;
+  display: inline-block;
+  width: var(--width-vertical, 100%);
+  height: 10px;
+  padding: 0;
+}
+
+.slider-wrapper-vertical input {
+  width: var(--width-vertical, 100%);
+  height: 10px;
+  margin: 0;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+.slider-wrapper-horizontal {
+  position: relative;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  top: -10px;
+  padding: 0;
+}
+
+.slider-wrapper-horizontal input {
+  width: 100%;
+  height: 10px;
+  margin: 0;
+}
+
+input[type='range'].range {
+  cursor: pointer;
+  -webkit-appearance: none;
+  z-index: 200;
+  border: 1px solid #e6e6e6;
+  background-color: #e6e6e6;
+  background-image: -webkit-linear-gradient(right, #e6e6e6, #d2d2d2);
+}
+
+input[type='range'].range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--width, 50%);
+  height: 10px;
+  background-color: rgb(146, 146, 146);
+  transition: all 2s;
+}
+
+input[type='range'].round {
+  border-radius: 10px;
+}
+
+input[type='range'].round::-webkit-slider-thumb {
+  border-radius: 5px;
+}
